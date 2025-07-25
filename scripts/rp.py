@@ -26,39 +26,12 @@ import os
 sys.path.append(os.path.dirname(__file__))  # for local files in scripts/
 #sys.path.append(os.path.abspath(os.path.join(__file__, "..", "..")))
 
-import attention.TOKENS
-import attention.hook_forwards
-import attention.reset_pmasks
-import attention.savepmasks
-
-import latent.denoised_callback_s
-import latent.denoiser_callback_s
-import latent.lora_namer
-import latent.setuploras
-import latent.unloadlorafowards
-import latent.forge_linear_forward
-
-import regions.MAXCOLREG
-import regions.IDIM
-import regions.KEYBRK
-import regions.KEYBASE
-import regions.KEYCOMM
-import regions.KEYPROMPT
-import regions.ALLKEYS
-import regions.ALLALLKEYS
-import regions.create_canvas
-import regions.draw_region
-import regions.change_color
-# import regions.detect_mask
-# import regions.detect_polygons
-import regions.draw_image
-import regions.save_mask
-import regions.load_mask
-import regions.changecs
-import regions.floatdef
-import regions.inpaintmaskdealer
-import regions.makeimgtmp
-import regions.matrixdealer
+from attention import (TOKENS, hook_forwards, reset_pmasks, savepmasks)
+from latent import (denoised_callback_s, denoiser_callback_s, lora_namer, setuploras, unloadlorafowards, forge_linear_forward)
+from regions import (MAXCOLREG, IDIM, KEYBRK, KEYBASE, KEYCOMM, KEYPROMPT, ALLKEYS, ALLALLKEYS,
+                             create_canvas, draw_region, change_color,#detect_mask, detect_polygons,  
+                             draw_image, save_mask, load_mask, changecs,
+                             floatdef, inpaintmaskdealer, makeimgtmp, matrixdealer)
 
 from io import BytesIO
 import base64

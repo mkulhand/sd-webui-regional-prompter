@@ -11,8 +11,9 @@ import os
 sys.path.append(os.path.dirname(__file__))
 
 import attention as att
-import regions.floatdef
-import attention.makerrandman
+from regions import floatdef
+from attention import makerrandman
+
 
 from modules import launch_utils
 forge = launch_utils.git_tag()[0:2] == "f2"
