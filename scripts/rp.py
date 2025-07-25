@@ -19,39 +19,46 @@ from json.decoder import JSONDecodeError
 #                              create_canvas, draw_region, change_color,#detect_mask, detect_polygons,  
 #                              draw_image, save_mask, load_mask, changecs,
 #                              floatdef, inpaintmaskdealer, makeimgtmp, matrixdealer)
-import sd_webui_regional_prompter.scripts.attention.TOKENS
-import sd_webui_regional_prompter.scripts.attention.hook_forwards
-import sd_webui_regional_prompter.scripts.attention.reset_pmasks
-import sd_webui_regional_prompter.scripts.attention.savepmasks
 
-import sd_webui_regional_prompter.scripts.latent.denoised_callback_s
-import sd_webui_regional_prompter.scripts.latent.denoiser_callback_s
-import sd_webui_regional_prompter.scripts.latent.lora_namer
-import sd_webui_regional_prompter.scripts.latent.setuploras
-import sd_webui_regional_prompter.scripts.latent.unloadlorafowards
-import sd_webui_regional_prompter.scripts.latent.forge_linear_forward
+import sys
+import os
 
-import sd_webui_regional_prompter.scripts.regions.MAXCOLREG
-import sd_webui_regional_prompter.scripts.regions.IDIM
-import sd_webui_regional_prompter.scripts.regions.KEYBRK
-import sd_webui_regional_prompter.scripts.regions.KEYBASE
-import sd_webui_regional_prompter.scripts.regions.KEYCOMM
-import sd_webui_regional_prompter.scripts.regions.KEYPROMPT
-import sd_webui_regional_prompter.scripts.regions.ALLKEYS
-import sd_webui_regional_prompter.scripts.regions.ALLALLKEYS
-import sd_webui_regional_prompter.scripts.regions.create_canvas
-import sd_webui_regional_prompter.scripts.regions.draw_region
-import sd_webui_regional_prompter.scripts.regions.change_color
-# import sd_webui_regional_prompter.scripts.regions.detect_mask
-# import sd_webui_regional_prompter.scripts.regions.detect_polygons
-import sd_webui_regional_prompter.scripts.regions.draw_image
-import sd_webui_regional_prompter.scripts.regions.save_mask
-import sd_webui_regional_prompter.scripts.regions.load_mask
-import sd_webui_regional_prompter.scripts.regions.changecs
-import sd_webui_regional_prompter.scripts.regions.floatdef
-import sd_webui_regional_prompter.scripts.regions.inpaintmaskdealer
-import sd_webui_regional_prompter.scripts.regions.makeimgtmp
-import sd_webui_regional_prompter.scripts.regions.matrixdealer
+sys.path.append(os.path.dirname(__file__))  # for local files in scripts/
+#sys.path.append(os.path.abspath(os.path.join(__file__, "..", "..")))
+
+import attention.TOKENS
+import attention.hook_forwards
+import attention.reset_pmasks
+import attention.savepmasks
+
+import latent.denoised_callback_s
+import latent.denoiser_callback_s
+import latent.lora_namer
+import latent.setuploras
+import latent.unloadlorafowards
+import latent.forge_linear_forward
+
+import regions.MAXCOLREG
+import regions.IDIM
+import regions.KEYBRK
+import regions.KEYBASE
+import regions.KEYCOMM
+import regions.KEYPROMPT
+import regions.ALLKEYS
+import regions.ALLALLKEYS
+import regions.create_canvas
+import regions.draw_region
+import regions.change_color
+# import regions.detect_mask
+# import regions.detect_polygons
+import regions.draw_image
+import regions.save_mask
+import regions.load_mask
+import regions.changecs
+import regions.floatdef
+import regions.inpaintmaskdealer
+import regions.makeimgtmp
+import regions.matrixdealer
 
 from io import BytesIO
 import base64
