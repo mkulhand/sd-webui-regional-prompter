@@ -4,9 +4,9 @@ import torch
 from modules import devices, shared, extra_networks, sd_hijack
 from modules.script_callbacks import CFGDenoisedParams, CFGDenoiserParams
 from torchvision.transforms import InterpolationMode, Resize  # Mask.
-from . import attention as att
-from .regions import floatdef
-from .attention import makerrandman
+import attention as att
+import regions.floatdef
+import attention.makerrandman
 
 from modules import launch_utils
 forge = launch_utils.git_tag()[0:2] == "f2"
