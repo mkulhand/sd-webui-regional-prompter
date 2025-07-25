@@ -4,7 +4,7 @@ import torch
 from modules import devices, shared, extra_networks, sd_hijack
 from modules.script_callbacks import CFGDenoisedParams, CFGDenoiserParams
 from torchvision.transforms import InterpolationMode, Resize  # Mask.
-import scripts.attention as att
+from . import attention as att
 from .regions import floatdef
 from .attention import makerrandman
 
